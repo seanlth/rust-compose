@@ -1,3 +1,5 @@
+
+#[macro_export]
 macro_rules! compose {
     ( $c:expr, ) => { $c };
     ( $c:expr, . $x:ident $(.$y:ident)* ) => { $x ( compose!($c, $(. $y)* ) ) };

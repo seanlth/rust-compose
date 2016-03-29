@@ -1,9 +1,3 @@
-# rust-compose
-Composition syntax in rust.
-
-## Example
-
-```
 #[macro_use(compose)] extern crate compose;
 use std::ops::Mul;
 
@@ -18,4 +12,3 @@ fn main() {
     let desort = compose!( rev . rev . square . sort );
     println!("{:?}", desort(v));
 }
-```
