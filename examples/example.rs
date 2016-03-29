@@ -9,6 +9,6 @@ fn square<T: Copy + Mul<T, Output=T>>(mut v: Vec<T>) -> Vec<T> {
 
 fn main() {
     let v = vec![1, 10, 3, 16, 43, 2, 19];
-    let desort = compose!( rev . rev . square . sort );
+    let desort = compose!( rev . sort . square );
     println!("{:?}", desort(v));
 }
